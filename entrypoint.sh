@@ -5,6 +5,7 @@ cd $INPUT_APP_SOURCE_CODE
 
 #Install dependencies
 echo "Installing dependencies"
+npm config set //registry.npmjs.org/:_authToken=$INPUT_NPM_TOKEN
 npm install > /dev/null 2>&1
 
 #Build application

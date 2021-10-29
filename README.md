@@ -16,6 +16,7 @@ In your workflow, define a step which refers to the action:
           AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
           APP_SOURCE_CODE: ./
           BUILD_COMMAND: "npm run build"
+          NPM_TOKEN: "token"
 ```
 
 ### Configuration
@@ -30,6 +31,7 @@ These settings are environment variables that the action will use for make the d
 | `AWS_DEFAULT_REGION` | The region of the bucket. Set to `us-east-1` by default. [Full list of regions here.](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-
 | `APP_SOURCE_CODE` | This is the source code that will be deployed | **yes** | ./
 | `BUILD_COMMAND` | Command used to build the application : https://cli.vuejs.org/guide/cli-service.html#vue-cli-service-build | **yes** | production
+| `NPM_TOKEN` | heypongo NPM token | **yes** | production
 
 
 # Complete workflow example 😁
@@ -63,6 +65,7 @@ jobs:
           AWS_BUCKET_NAME: awesome-bucket
           APP_SOURCE_CODE: ./example
           BUILD_COMMAND: "npm run build"
+          NPM_TOKEN: "token"
 ```
 
 # Note 👀

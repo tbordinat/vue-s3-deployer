@@ -26,6 +26,10 @@ inputs:
     description: "Command used to build your application. Ex: `npm run build`"  
     required: false
     default: production
+  NPM_TOKEN:
+    description: "NPM Token for heypongo npm repo"
+    required: false
+    default: ToBeConfigured
 
 runs:
   using: "docker"
@@ -37,3 +41,4 @@ runs:
     AWS_BUCKET_NAME: ${{ inputs.AWS_BUCKET_NAME }}
     APP_SOURCE_CODE: ${{ inputs.APP_SOURCE_CODE }}
     BUILD_COMMAND: ${{ inputs.BUILD_COMMAND }}
+    NPM_TOKEN: ${{ inputs.NPM_TOKEN }}
